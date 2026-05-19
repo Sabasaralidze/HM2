@@ -1,0 +1,42 @@
+[
+    {
+      "question": "What is the purpose of safety logging?",
+      "expected_keywords": ["log", "safety", "audit"]
+    },
+    {
+      "question": "Why should an API use bearer token authentication?",
+      "expected_keywords": ["authentication", "token", "secure"]
+    },
+    {
+      "question": "What is Pydantic used for?",
+      "expected_keywords": ["validation", "data", "input"]
+    },
+    {
+      "question": "Why should errors be sanitized?",
+      "expected_keywords": ["hide", "internal", "details"]
+    },
+    {
+      "question": "What is exponential backoff?",
+      "expected_keywords": ["retry", "wait", "failure"]
+    },
+    {
+      "question": "Why do we need user isolation?",
+      "expected_keywords": ["user", "data", "separate"]
+    },
+    {
+      "question": "What is an episode log?",
+      "expected_keywords": ["request", "response", "latency"]
+    },
+    {
+      "question": "Why should .env not be committed?",
+      "expected_keywords": ["secret", "key", "private"]
+    },
+    {
+      "question": "What is a golden test set?",
+      "expected_keywords": ["test", "expected", "evaluation"]
+    },
+    {
+      "question": "Why do LLM calls need timeout?",
+      "expected_keywords": ["timeout", "delay", "response"]
+    }
+  ]
