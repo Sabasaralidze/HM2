@@ -1,11 +1,20 @@
 from tenacity import retry, stop_after_attempt, wait_exponential
 
+TIMEOUT_SECONDS = 10
+
 
 @retry(
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, min=1, max=8)
 )
 def call_llm(prompt: str) -> str:
+    """
+    Mock LLM call used for homework evaluation.
+
+    TIMEOUT_SECONDS documents the timeout boundary that would be used
+    for a real external LLM request. The retry decorator provides
+    exponential backoff.
+    """
 
     prompt_lower = prompt.lower()
 
@@ -37,6 +46,6 @@ def call_llm(prompt: str) -> str:
         return "Golden test evaluation checks expected responses."
 
     elif "timeout" in prompt_lower:
-        return "Timeout prevents long response delays."
+        return f"Timeout prevents long response delays. Timeout is set to {TIMEOUT_SECONDS} seconds."
 
     return "Fallback response: safe default answer."
